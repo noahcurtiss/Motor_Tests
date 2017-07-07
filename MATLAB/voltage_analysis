@@ -1,0 +1,7 @@
+format short G
+
+graph_matrix(250,3);
+
+for v = 10.8:0.2:12.6
+    file_name = join({'tiger',String(v))
+    
