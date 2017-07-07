@@ -19,7 +19,19 @@
 
 6) Upload step_test.ino and run record.py (remember to update the file name). This should take about 15 mins.
 
-7) Repeat steps 4-6 for each voltage you want to test. It is important to do a force calibration before or after every test as the force sensors' readings could change.
+7) Repeat steps 4-6 for each voltage you want to test. It is important to do a force calibration before or after every test as the force sensor's readings could change.
 
-8) Run analysis.py. Be sure to update the file paths and tailor the data analysis to fit your own needs. For further analysis, Matlab files are also included.
+8) Run analysis.py to filter data and format it for graphing. Be sure to update the file paths and tailor the data analysis to fit your own needs. For further analysis, Matlab files are also included.
+
+# Using the Motor Data
+Using the data from analysis.py, you can run escVolt2cmd.py, escVolt2cmd_send.py, inputVolt2cmd.py, or inputVolt2cmd_send.py. Before running either of the send programs, do a force calibration, input the v1, v2, d, b, and m values into cmd_reader.ino, and then upload cmd_reader to the arduino. 
+- inputVolt2cmd.py calculates the proper command given a desired force and input voltage.
+- inputVolt2cmd_send.py does the calculations of inputVolt2cmd.py and sends the command to the ESC.
+- escVolt2cmd_send.py reads voltage from the esc, takes a desired force and calculates the proper command. escVolt2cmd_send.py continuously updates the command based on the changing voltage.
+- escVot2cmd.py simulates the behavior of escVolt2cmd_send.py by predicting the voltage change from a command change.
+
+Data from the following motors is included:
+- robbe Roxxy BL-Motor 2827-35, 760kv. 10x4.5 prop
+- tiger mn3110-17, 700kv. 10x4.7 prop
+Run analysis.py on this data to 
 
