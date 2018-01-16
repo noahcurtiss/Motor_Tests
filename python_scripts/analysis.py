@@ -120,5 +120,5 @@ for volt in np.arange(volt_range[0],volt_range[2]+volt_range[1],volt_range[1]):
 		D = np.r_['0,2',D,[volt,cmd,avgVolt]]
 D = np.delete(D,(0),axis=0)
 np.save('/home/Documents/matrix_D',D)
-np.savetxt('/home/Documents/matrix_D.txt',delimiter = '\t')
+np.savetxt('/home/Documents/matrix_D.txt',D,delimiter = '\t')
 print "Done"
