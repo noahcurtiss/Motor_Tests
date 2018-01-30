@@ -25,7 +25,7 @@
 
 7) Repeat steps 4-6 for each voltage you want to test. Let the motor cool between each test to keep the data consistent. It is important to do a force calibration before or after every test as the force sensor's readings could change.
 
-8) Run analysis.py to filter data and format it for graphing. Be sure to update the file paths and the d, b (step 1), and m (known test mass in step 4iii) values
+8) Run analysis.py to filter data and format it for graphing. Be sure to update the file paths and the d, b (step 1), and m (step 4iii) values
 
 # Using the Motor Data
 Using the data from analysis.py, you can run escVolt2cmd.py, escVolt2cmd_send.py, inputVolt2cmd.py, or inputVolt2cmd_send.py. 
