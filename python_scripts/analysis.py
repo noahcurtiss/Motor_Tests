@@ -39,9 +39,9 @@ def forcefilter(matrix, risetime, cmd_bounds):   #only includes data after riset
 
 def analysis(volt,cmd_bounds):
 	#fill in your own file name
-	A = np.loadtxt('/home/Documents/robbe/robbe'+('%.1f' % volt)+ '.txt',delimiter='\t')
-	v1_data = np.loadtxt('/home/Documents/robbe/robbe'+('%.1f' % volt)+ 'v1.txt')
-	v2_data = np.loadtxt('/home/Documents/robbe/robbe'+('%.1f' % volt)+ 'v2.txt')
+	A = np.loadtxt('/home/noah/Documents/Motor_Tests/tiger/tiger'+('%.1f' % volt)+ '.txt',delimiter='\t')
+	v1_data = np.loadtxt('/home/noah/Documents/Motor_Tests/tiger/tiger'+('%.1f' % volt)+ 'v1.txt')
+	v2_data = np.loadtxt('/home/noah/Documents/Motor_Tests/tiger/tiger'+('%.1f' % volt)+ 'v2.txt')
 	
 	v1 = np.mean(v1_data)
 	v2 = np.mean(v2_data) 	#v1=strain sensor reading with no mass, v2=reading with mass.
@@ -81,8 +81,8 @@ for volt in np.arange(volt_range[0],volt_range[2]+volt_range[1],volt_range[1]):
 	total_data = np.r_['0,2',total_data,forcedata]
 
 total_data = np.delete(total_data,(0),axis=0)
-np.save('/home/Documents/total_data',total_data)
-np.savetxt('/home/Documents/total_data.txt',total_data,delimiter = '\t')
+np.save('/home/noah/Documents/total_data',total_data)
+np.savetxt('/home/noah/Documents/total_data.txt',total_data,delimiter = '\t')
 
 #B: [inputVoltage, command, averageForce]
 B = np.zeros(3)
@@ -93,8 +93,8 @@ for volt in np.arange(volt_range[0],volt_range[2]+volt_range[1],volt_range[1]):
 		avgForce = np.mean(cmd_matrix[:,10])
 		B = np.r_['0,2',B,[volt,cmd,avgForce]]
 B = np.delete(B,(0),axis=0)
-np.save('/home/Documents/matrix_B',B)
-np.savetxt('/home/Documents/matrix_B.txt',B,delimiter = '\t')
+np.save('/home/noah/Documents/matrix_B',B)
+np.savetxt('/home/noah/Documents/matrix_B.txt',B,delimiter = '\t')
 
 #C: [ESC voltage, command, average force]
 C = np.zeros(3)
@@ -107,8 +107,8 @@ for voltage in np.arange(10.3,12.8,0.1): #input values for range of ESC voltage 
 				avgForce = np.mean(cmd_matrix[:,10])
 				C = np.r_['0,2',C,[voltage,cmd,avgForce]]
 C = np.delete(C,(0),axis=0)
-np.save('/home/Documents/matrix_C',C)
-np.savetxt('/home/Documents/matrix_C.txt',C,delimiter = '\t')
+np.save('/home/noah/Documents/matrix_C',C)
+np.savetxt('/home/noah/Documents/matrix_C.txt',C,delimiter = '\t')
 
 #D: [input voltage, command, average esc voltage]
 D = np.zeros(3)
@@ -119,6 +119,6 @@ for volt in np.arange(volt_range[0],volt_range[2]+volt_range[1],volt_range[1]):
 		avgVolt = np.mean(cmd_matrix0[:,6])
 		D = np.r_['0,2',D,[volt,cmd,avgVolt]]
 D = np.delete(D,(0),axis=0)
-np.save('/home/Documents/matrix_D',D)
-np.savetxt('/home/Documents/matrix_D.txt',D,delimiter = '\t')
+np.save('/home/noah/Documents/matrix_D',D)
+np.savetxt('/home/noah/Documents/matrix_D.txt',D,delimiter = '\t')
 print "Done"

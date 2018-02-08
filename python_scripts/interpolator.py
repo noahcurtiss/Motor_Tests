@@ -17,8 +17,8 @@ voltage_values = [10.6,11.3,12.0,12.6]
 plt.figure(1)
 plotnum = 221
 
-inputforce = 3
-inputvolt = 11.7
+inputforce = 2
+inputvolt = 11.1
 i = 0
 cmddata = np.zeros(4)
 

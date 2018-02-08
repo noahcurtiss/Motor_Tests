@@ -12,8 +12,8 @@ import math
 import serial
 import string
 
-C = np.load('/home/Documents/matrix_C.npy')
-D = np.load('/home/Documents/matrix_D.npy')
+C = np.load('/home/noah/Documents/matrix_C.npy')
+D = np.load('/home/noah/Documents/matrix_D.npy')
 
 X = C[:,0]
 Y = C[:,2]
@@ -29,11 +29,11 @@ points1 = np.c_[X1,Y1]
 # fig = plt.figure()
 # ax = fig.add_subplot(111, projection='3d')
 # grid_x, grid_y = np.mgrid[10.7:12.7:40j, 0:max(Y):300j]
-# 
+
 # grid_z = griddata(points, Z, (grid_x, grid_y), method='linear')
-# 
+
 # print griddata(points, Z, (11.1, 5), method='linear')
-# 
+
 # ax.scatter(X,Y,Z,'o')
 # ax.plot_wireframe(grid_x,grid_y, grid_z, rstride=1, cstride=1)
 # plt.show()
