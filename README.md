@@ -34,7 +34,7 @@ Using the data from analysis.py, you can run escVolt2cmd.py, escVolt2cmd_send.py
 - escVolt2cmd_send.py reads voltage from the esc, takes a desired force and calculates the proper command. It continuously updates the command based on the changing voltage.
 - escVot2cmd.py simulates the behavior of escVolt2cmd_send.py by predicting the voltage change from a command change.
 
-Before running either of the "send" programs, do a force calibration, input the v1, v2, d, b, and m values into cmd_reader.ino, and then upload cmd_reader to the arduino. 
+Before running either of the "send" programs, do a force calibration, input the v1, v2, d, b, and m values into the python script, and then upload cmd_reader to the arduino. 
 
 Data from the following motors is included:
 - robbe Roxxy BL-Motor 2827-35, 760kv. 10x4.5 prop
