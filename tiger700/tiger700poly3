@@ -1,0 +1,28 @@
+Linear model Poly3:
+     f(x) = p1*x^3 + p2*x^2 + p3*x + p4
+Coefficients (with 95% confidence bounds):
+       p1 =      0.2268  (0.1935, 0.2602)
+       p2 =      -5.026  (-5.573, -4.479)
+       p3 =       50.68  (48.19, 53.16)
+       p4 =       1.849  (-0.9463, 4.643)
+
+Goodness of fit:
+  SSE: 2945
+  R-square: 0.9955
+  Adjusted R-square: 0.9954
+  RMSE: 4.893
+
+
+Linear model Poly2:
+     f(x) = p1*x^2 + p2*x + p3
+Coefficients (with 95% confidence bounds):
+       p1 =      -1.363  (-1.512, -1.215)
+       p2 =       35.31  (33.71, 36.92)
+       p3 =       14.56  (11.31, 17.81)
+
+Goodness of fit:
+  SSE: 7279
+  R-square: 0.9889
+  Adjusted R-square: 0.9887
+  RMSE: 7.662
+
